@@ -35,7 +35,7 @@ public class RabbitMQConfig {
     }
 
     @PostConstruct
-    private void adicionaFilas() {
+    private void addQueues() {
         Queue jogos = QueueBuilder.durable("jogos")
                 .withArgument("x-dead-letter-exchange", "deadLetterExchange")
                 .withArgument("x-dead-letter-routing-key", "deadLetterJogos")
