@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class QueueController {
-    private RabbitTemplate rabbitTemplate;
+    private final RabbitTemplate rabbitTemplate;
 
     @Autowired
     public QueueController(RabbitTemplate rabbitTemplate) {
@@ -21,7 +21,7 @@ public class QueueController {
     @PostMapping("/{numberOfMessages}")
     public String sendMessagesToQueue(@PathVariable Long numberOfMessages, @RequestBody String body) {
         for (int i = 0; i < numberOfMessages; i++) {
-            rabbitTemplate.convertAndSend("jogos", body);
+            this.rabbitTemplate.convertAndSend("jogos", body);
         }
         return "Messages sended.";
     }
