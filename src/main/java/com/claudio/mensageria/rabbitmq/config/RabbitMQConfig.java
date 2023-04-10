@@ -30,7 +30,7 @@ public class RabbitMQConfig {
         factory.setConnectionFactory(connectionFactory);
         factory.setDefaultRequeueRejected(false);
         factory.setStartConsumerMinInterval(1L);
-        factory.setMaxConcurrentConsumers(15);
+        factory.setMaxConcurrentConsumers(60);
         return factory;
     }
 
