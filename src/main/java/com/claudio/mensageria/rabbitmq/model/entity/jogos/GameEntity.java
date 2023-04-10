@@ -19,6 +19,10 @@ public class GameEntity {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    private Long distribuitor;
+
+    private Long categoria;
+
 
     @Override
     public boolean equals(Object o) {
