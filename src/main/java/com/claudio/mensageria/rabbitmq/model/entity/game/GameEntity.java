@@ -1,4 +1,4 @@
-package com.claudio.mensageria.rabbitmq.model.entity.jogos;
+package com.claudio.mensageria.rabbitmq.model.entity.game;
 
 import jakarta.persistence.*;
 import lombok.*;

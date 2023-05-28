@@ -1,6 +1,6 @@
 services:
   rabbitmq:
-    image: rabbitmq:3-management-alpine
+    image: rabbitmq:3.10.23-management-alpine
     container_name: rabbitmq
     restart: always
     ports:

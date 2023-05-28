@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
-    @RabbitListener(queues = "jogos", containerFactory = "listenerContainerFactory")
+    @RabbitListener(queues = "${queue.games}", containerFactory = "listenerContainerFactory")
     public void jogosConsumer(String message) {
         log.info("Mensagem recebida: ");
         log.info(message);
